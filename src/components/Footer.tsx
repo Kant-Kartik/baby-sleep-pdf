@@ -13,17 +13,17 @@ export const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-primary-foreground/80">
-                <li><a href="#" className="hover:text-primary-foreground transition-colors">Contact Us</a></li>
-                <li><a href="#" className="hover:text-primary-foreground transition-colors">FAQ</a></li>
-                <li><a href="#" className="hover:text-primary-foreground transition-colors">Support Center</a></li>
+                <li><a href="/contact" className="hover:text-primary-foreground transition-colors">Contact Us</a></li>
+                <li><a href="/shipping" className="hover:text-primary-foreground transition-colors">Shipping Info</a></li>
+                <li><a href="/refunds" className="hover:text-primary-foreground transition-colors">Refunds</a></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-primary-foreground/80">
-                <li><a href="#" className="hover:text-primary-foreground transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-primary-foreground transition-colors">Terms of Service</a></li>
+                <li><a href="/privacy" className="hover:text-primary-foreground transition-colors">Privacy Policy</a></li>
+                <li><a href="/terms" className="hover:text-primary-foreground transition-colors">Terms of Service</a></li>
               </ul>
             </div>
           </div>
