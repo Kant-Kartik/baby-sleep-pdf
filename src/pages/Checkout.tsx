@@ -44,7 +44,7 @@ const Checkout = () => {
         },
         body: JSON.stringify({
           email: email,
-          amount: 9, // Always $9 USD
+          amount: 1, // Temporary $1 USD for testing
           userCountry: userCountry, // Let Razorpay handle payment methods based on location
         }),
       });
@@ -167,18 +167,18 @@ const Checkout = () => {
             <div className="mb-6">
               <div className="flex justify-between items-center mb-2">
                 <span className="text-lg font-semibold">7-Day Baby Sleep Program</span>
-                <span className="text-2xl font-bold text-primary">$9</span>
+                <span className="text-2xl font-bold text-primary">$1</span>
               </div>
               <div className="flex justify-between items-center text-sm text-muted-foreground">
                 <span>Original Price: $30</span>
-                <span className="text-primary font-medium">Save $21 (70% OFF)</span>
+                <span className="text-primary font-medium">Save $29 (97% OFF)</span>
               </div>
             </div>
 
             <div className="border-t border-border pt-4 mb-6">
               <div className="flex justify-between items-center text-lg font-bold">
                 <span>Total</span>
-                <span className="text-primary">$9</span>
+                <span className="text-primary">$1</span>
               </div>
             </div>
 
@@ -244,7 +244,7 @@ const Checkout = () => {
                     <span>Processing...</span>
                   </div>
                 ) : (
-                  `Complete Purchase - $9`
+                  `Complete Purchase - $1`
                 )}
               </Button>
 
