@@ -21,6 +21,18 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Email and amount are required' });
     }
 
+    // Check environment variables
+    if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
+      console.error('Missing Razorpay environment variables');
+      return res.status(500).json({ 
+        error: 'Server configuration error - missing API keys',
+        debug: {
+          hasKeyId: !!process.env.RAZORPAY_KEY_ID,
+          hasKeySecret: !!process.env.RAZORPAY_KEY_SECRET
+        }
+      });
+    }
+
     // Initialize Razorpay
     const razorpay = new Razorpay({
       key_id: process.env.RAZORPAY_KEY_ID,
