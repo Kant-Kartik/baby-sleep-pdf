@@ -39,16 +39,29 @@ export default async function handler(req, res) {
       key_secret: process.env.RAZORPAY_KEY_SECRET,
     });
 
-    // Always use USD - let Razorpay handle payment methods based on user location
+    // Use INR for Indian users to enable UPI/NetBanking, USD for others
+    let finalCurrency, finalAmount;
+    
+    if (userCountry === 'IN') {
+      // Indian customer - use INR to enable UPI/NetBanking
+      finalCurrency = 'INR';
+      const exchangeRate = 83; // 1 USD = 83 INR
+      finalAmount = Math.round(amount * exchangeRate * 100); // Convert to paise
+    } else {
+      // Global customer - use USD
+      finalCurrency = 'USD';
+      finalAmount = amount * 100; // Convert to cents
+    }
+
     const order = await razorpay.orders.create({
-      amount: amount * 100, // Convert to cents ($9 = 900 cents)
-      currency: 'USD',
+      amount: finalAmount,
+      currency: finalCurrency,
       receipt: `order_${Date.now()}`,
       notes: {
         customer_email: email,
         product: '7-Day Baby Sleep Guide',
         amount_usd: amount,
-        user_country: userCountry, // Pass location info to Razorpay
+        user_country: userCountry,
       },
     });
 
@@ -58,6 +71,7 @@ export default async function handler(req, res) {
       currency: order.currency,
       amount_usd: amount,
       user_country: userCountry,
+      final_currency: finalCurrency,
     });
   } catch (error) {
     console.error('Error creating Razorpay order:', error);

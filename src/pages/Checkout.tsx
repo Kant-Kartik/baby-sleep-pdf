@@ -82,6 +82,12 @@ const Checkout = () => {
       prefill: {
         email: email,
       },
+      method: {
+        upi: true,
+        netbanking: true,
+        card: true,
+        wallet: true,
+      },
       theme: {
         color: '#7c3aed',
       },
