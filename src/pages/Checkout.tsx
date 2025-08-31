@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowLeft, CreditCard, Lock } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
@@ -26,7 +26,7 @@ const Checkout = () => {
         },
         body: JSON.stringify({
           email: email,
-          amount: 9, // $9 USD
+          amount: 9, // $9 USD - Razorpay handles conversion and payment methods
         }),
       });
 

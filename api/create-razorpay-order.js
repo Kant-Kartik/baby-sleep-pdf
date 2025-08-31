@@ -39,10 +39,10 @@ export default async function handler(req, res) {
       key_secret: process.env.RAZORPAY_KEY_SECRET,
     });
 
-    // Create Razorpay order in USD
+    // Always use USD - Razorpay will handle currency conversion and payment methods automatically
     const order = await razorpay.orders.create({
       amount: amount * 100, // Convert to cents ($9 = 900 cents)
-      currency: 'USD', // US Dollars
+      currency: 'USD',
       receipt: `order_${Date.now()}`,
       notes: {
         customer_email: email,
