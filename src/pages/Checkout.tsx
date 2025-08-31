@@ -13,6 +13,24 @@ const Checkout = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState('');
+  const [userCountry, setUserCountry] = useState('');
+
+  // Detect user's country on component mount (for Razorpay payment options)
+  useEffect(() => {
+    detectUserLocation();
+  }, []);
+
+  const detectUserLocation = async () => {
+    try {
+      // Get user's country for Razorpay payment method selection
+      const response = await fetch('https://ipapi.co/json/');
+      const data = await response.json();
+      setUserCountry(data.country_code || 'US');
+    } catch (error) {
+      console.log('Could not detect location, defaulting to US');
+      setUserCountry('US');
+    }
+  };
 
   const handlePayment = async () => {
     setLoading(true);
@@ -26,7 +44,8 @@ const Checkout = () => {
         },
         body: JSON.stringify({
           email: email,
-          amount: 9, // $9 USD - Razorpay handles conversion and payment methods
+          amount: 9, // Always $9 USD
+          userCountry: userCountry, // Let Razorpay handle payment methods based on location
         }),
       });
 

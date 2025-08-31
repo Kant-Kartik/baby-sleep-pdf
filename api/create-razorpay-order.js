@@ -15,7 +15,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { email, amount } = req.body;
+    const { email, amount, currency, userCountry } = req.body;
 
     if (!email || !amount) {
       return res.status(400).json({ error: 'Email and amount are required' });
@@ -39,7 +39,7 @@ export default async function handler(req, res) {
       key_secret: process.env.RAZORPAY_KEY_SECRET,
     });
 
-    // Always use USD - Razorpay will handle currency conversion and payment methods automatically
+    // Always use USD - let Razorpay handle payment methods based on user location
     const order = await razorpay.orders.create({
       amount: amount * 100, // Convert to cents ($9 = 900 cents)
       currency: 'USD',
@@ -48,6 +48,7 @@ export default async function handler(req, res) {
         customer_email: email,
         product: '7-Day Baby Sleep Guide',
         amount_usd: amount,
+        user_country: userCountry, // Pass location info to Razorpay
       },
     });
 
@@ -56,6 +57,7 @@ export default async function handler(req, res) {
       amount: order.amount,
       currency: order.currency,
       amount_usd: amount,
+      user_country: userCountry,
     });
   } catch (error) {
     console.error('Error creating Razorpay order:', error);
