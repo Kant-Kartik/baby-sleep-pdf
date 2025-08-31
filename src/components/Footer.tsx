@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Footer = () => {
     return (
       <footer className="bg-night-blue text-primary-foreground py-12 px-4">
@@ -13,17 +15,17 @@ export const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-primary-foreground/80">
-                <li><a href="/contact" className="hover:text-primary-foreground transition-colors">Contact Us</a></li>
-                <li><a href="/shipping" className="hover:text-primary-foreground transition-colors">Shipping Info</a></li>
-                <li><a href="/refunds" className="hover:text-primary-foreground transition-colors">Refunds</a></li>
+                <li><Link to="/contact" className="hover:text-primary-foreground transition-colors">Contact Us</Link></li>
+                <li><Link to="/shipping" className="hover:text-primary-foreground transition-colors">Shipping Info</Link></li>
+                <li><Link to="/refunds" className="hover:text-primary-foreground transition-colors">Refunds</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-primary-foreground/80">
-                <li><a href="/privacy" className="hover:text-primary-foreground transition-colors">Privacy Policy</a></li>
-                <li><a href="/terms" className="hover:text-primary-foreground transition-colors">Terms of Service</a></li>
+                <li><Link to="/privacy" className="hover:text-primary-foreground transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="hover:text-primary-foreground transition-colors">Terms of Service</Link></li>
               </ul>
             </div>
           </div>
