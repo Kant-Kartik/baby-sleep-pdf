@@ -72,7 +72,7 @@ const Checkout = () => {
         
         try {
           // Verify payment and send email
-          const verifyResponse = await fetch('/api/verify-payment', {
+          const verifyResponse = await fetch('/api/verify-payment-sendgrid', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
