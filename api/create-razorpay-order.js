@@ -60,6 +60,8 @@ export default async function handler(req, res) {
       notes: {
         customer_email: email,
         product: '7-Day Baby Sleep Guide',
+        merchant_name: '7-Day Baby Sleep Program',
+        business_name: 'Baby Sleep Guide',
         amount_usd: amount,
         user_country: userCountry,
       },

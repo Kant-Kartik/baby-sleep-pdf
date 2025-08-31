@@ -77,7 +77,7 @@ const Checkout = () => {
       amount: order.amount,
       currency: order.currency,
       name: '7-Day Baby Sleep Program',
-      description: 'Transform your baby\'s sleep in just 7 days',
+      description: 'Premium baby sleep guide - instant PDF delivery',
       order_id: order.id,
       prefill: {
         email: email,
