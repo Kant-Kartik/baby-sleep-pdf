@@ -21,7 +21,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <MetaPixel pixelId={import.meta.env.VITE_META_PIXEL_ID || ''} />
+      <MetaPixel pixelId="3624737897834830" />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
