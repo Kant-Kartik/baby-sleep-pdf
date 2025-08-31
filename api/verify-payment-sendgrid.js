@@ -1,7 +1,11 @@
-const crypto = require('crypto');
-const sgMail = require('@sendgrid/mail');
-const fs = require('fs');
-const path = require('path');
+import crypto from 'crypto';
+import sgMail from '@sendgrid/mail';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default async function handler(req, res) {
   // Handle CORS
