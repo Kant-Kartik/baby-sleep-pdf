@@ -58,7 +58,7 @@ async function sendEmailWithPDF(customerEmail, paymentId) {
   });
 
   // Read PDF file
-  const pdfPath = path.join(process.cwd(), 'public', '7-Day-Baby-Sleep-Program.pdf');
+  const pdfPath = path.join(process.cwd(), 'public', '7-Day-Baby-Sleep-Guide.pdf');
   
   // Email content
   const mailOptions = {
@@ -129,7 +129,7 @@ async function sendEmailWithPDF(customerEmail, paymentId) {
     `,
     attachments: [
       {
-        filename: '7-Day-Baby-Sleep-Program.pdf',
+        filename: '7-Day-Baby-Sleep-Guide.pdf',
         path: pdfPath,
         contentType: 'application/pdf'
       }

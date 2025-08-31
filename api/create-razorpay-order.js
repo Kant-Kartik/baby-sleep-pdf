@@ -39,18 +39,15 @@ export default async function handler(req, res) {
       key_secret: process.env.RAZORPAY_KEY_SECRET,
     });
 
-    // Convert USD to INR (approximate rate: 1 USD = 83 INR)
-    const amountInINR = Math.round(amount * 83);
-
-    // Create Razorpay order
+    // Create Razorpay order in USD
     const order = await razorpay.orders.create({
-      amount: amountInINR * 100, // Convert to paise (₹747 = 74700 paise for $9)
-      currency: 'INR', // Indian Rupees
+      amount: amount * 100, // Convert to cents ($9 = 900 cents)
+      currency: 'USD', // US Dollars
       receipt: `order_${Date.now()}`,
       notes: {
         customer_email: email,
-        product: '7-Day Baby Sleep Program',
-        original_amount_usd: amount,
+        product: '7-Day Baby Sleep Guide',
+        amount_usd: amount,
       },
     });
 
@@ -59,7 +56,6 @@ export default async function handler(req, res) {
       amount: order.amount,
       currency: order.currency,
       amount_usd: amount,
-      amount_inr: amountInINR,
     });
   } catch (error) {
     console.error('Error creating Razorpay order:', error);

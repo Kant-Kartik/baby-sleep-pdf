@@ -56,7 +56,7 @@ async function sendEmailWithPDF(customerEmail, paymentId) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   // Read PDF file and convert to base64
-  const pdfPath = path.join(process.cwd(), 'public', '7-Day-Baby-Sleep-Program.pdf');
+  const pdfPath = path.join(process.cwd(), 'public', '7-Day-Baby-Sleep-Guide.pdf');
   const pdfContent = fs.readFileSync(pdfPath);
   const pdfBase64 = pdfContent.toString('base64');
 
@@ -132,7 +132,7 @@ async function sendEmailWithPDF(customerEmail, paymentId) {
     attachments: [
       {
         content: pdfBase64,
-        filename: '7-Day-Baby-Sleep-Program.pdf',
+        filename: '7-Day-Baby-Sleep-Guide.pdf',
         type: 'application/pdf',
         disposition: 'attachment'
       }
