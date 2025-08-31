@@ -40,13 +40,13 @@ const Shipping = () => {
 
             <h2 className="text-xl font-semibold mb-3 text-foreground">Delivery Timeframe</h2>
             <p className="mb-4">
-              <strong>Within 24 hours:</strong> Your PDF will be sent directly to your email address within 24 hours of successful payment.
+              <strong>Within 1-2 hours:</strong> Your PDF will be sent directly to your email address within 1-2 hours of successful payment. <strong>Delivery is usually instant!</strong>
             </p>
 
             <h2 className="text-xl font-semibold mb-3 text-foreground">How to Access Your PDF</h2>
             <ol className="list-decimal pl-6 mb-4">
               <li>Complete your purchase using our secure payment system</li>
-              <li>Check your email (including spam folder) within 24 hours</li>
+              <li>Check your email (including spam folder) within 1-2 hours</li>
               <li>Download the PDF attachment directly from the email</li>
               <li>Save the PDF to your device for future reference</li>
             </ol>
@@ -60,7 +60,7 @@ const Shipping = () => {
 
             <h2 className="text-xl font-semibold mb-3 text-foreground">Important Notes</h2>
             <ul className="list-disc pl-6 mb-4">
-              <li>Check your spam/junk email folder if you don't see the email within 24 hours</li>
+              <li>Check your spam/junk email folder if you don't see the email within 1-2 hours</li>
               <li>Ensure you provide a valid email address during purchase</li>
               <li>Save the PDF to your device immediately upon receipt</li>
               <li>We do not provide customer support or re-send lost files</li>
@@ -69,7 +69,7 @@ const Shipping = () => {
             <h2 className="text-xl font-semibold mb-3 text-foreground">No Customer Support</h2>
             <p className="mb-4">
               <strong>Please note:</strong> We do not provide customer support, re-delivery services, or assistance with technical issues. 
-              All sales are final and PDF delivery is automated via email within 24 hours of purchase.
+              All sales are final and PDF delivery is automated via email within 1-2 hours of purchase.
             </p>
           </div>
         </div>

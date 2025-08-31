@@ -37,7 +37,7 @@ const Terms = () => {
             <ul className="list-disc pl-6 mb-4">
               <li>All prices are listed in USD</li>
               <li>Payment is processed securely through Razorpay</li>
-              <li>You will receive the PDF directly in your email within 24 hours after successful payment</li>
+              <li>You will receive the PDF directly in your email within 1-2 hours after successful payment (usually instant)</li>
               <li><strong>All sales are final - NO REFUNDS will be provided</strong></li>
             </ul>
 

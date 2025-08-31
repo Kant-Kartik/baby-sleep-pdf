@@ -21,7 +21,7 @@ const Success = () => {
           
           // Log email processing (in real app, trigger email send)
           if (email) {
-            console.log(`Payment verified. PDF will be emailed to ${email} within 24 hours`);
+            console.log(`Payment verified. PDF will be emailed to ${email} within 1-2 hours (usually instant)`);
           }
         } catch (error) {
           console.error('Payment verification failed:', error);
@@ -78,7 +78,7 @@ const Success = () => {
                 </p>
                 <div className="flex items-center justify-center text-blue-600">
                   <Clock className="h-5 w-5 mr-2" />
-                  <span className="font-medium">Within 24 hours</span>
+                  <span className="font-medium">Within 1-2 hours (usually instant!)</span>
                 </div>
               </div>
             )}

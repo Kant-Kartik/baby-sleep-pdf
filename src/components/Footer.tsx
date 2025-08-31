@@ -11,7 +11,7 @@ export const Footer = () => {
                 Helping families achieve peaceful nights and restful sleep since 2020.
               </p>
               <p className="text-primary-foreground/80 mt-4">
-                After purchase, you'll receive the PDF guide directly in your email within 24 hours.
+                After purchase, you'll receive the PDF guide directly in your email within instantly.
               </p>
             </div>
             
