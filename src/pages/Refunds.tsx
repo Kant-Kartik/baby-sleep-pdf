@@ -68,16 +68,16 @@ const Refunds = () => {
               </div>
             </div>
 
-            <h2 className="text-xl font-semibold mb-3 text-foreground">No Customer Support</h2>
+            <h2 className="text-xl font-semibold mb-3 text-foreground">Customer Support</h2>
             <p className="mb-4">
-              We do not provide customer support services, including:
+              For questions about our refund policy or other inquiries, contact us at support@babysleeppdf.com. 
+              We aim to respond within 24 hours. Please note:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-1">
-              <li>Refund processing or requests</li>
-              <li>Technical assistance</li>
-              <li>Re-delivery of lost files</li>
-              <li>Email or chat support</li>
-              <li>Phone support</li>
+              <li>No refunds are processed under any circumstances</li>
+              <li>We can assist with delivery issues</li>
+              <li>Technical guidance for downloading PDFs</li>
+              <li>General product inquiries</li>
             </ul>
 
             <h2 className="text-xl font-semibold mb-3 text-foreground">Delivery Guarantee</h2>

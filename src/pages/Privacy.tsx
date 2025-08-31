@@ -33,6 +33,7 @@ const Privacy = () => {
               <li>To process your purchase and deliver the PDF guide</li>
               <li>To send you the purchased digital product via email</li>
               <li>To send payment confirmation</li>
+              <li>To provide customer support when requested</li>
             </ul>
 
             <h2 className="text-xl font-semibold mb-3 text-foreground">Information Sharing</h2>
@@ -49,14 +50,14 @@ const Privacy = () => {
 
             <h2 className="text-xl font-semibold mb-3 text-foreground">Your Rights</h2>
             <p className="mb-4">
-              You have the right to access, update, or delete your personal information. However, please note 
-              that we do not provide customer support services.
+              You have the right to access, update, or delete your personal information. Contact us at 
+              support@babysleeppdf.com for any privacy-related requests.
             </p>
 
-            <h2 className="text-xl font-semibold mb-3 text-foreground">No Customer Support</h2>
+            <h2 className="text-xl font-semibold mb-3 text-foreground">Contact Us</h2>
             <p className="mb-4">
-              Please note that we do not provide customer support or respond to privacy-related requests. 
-              All transactions are automated and final.
+              If you have any questions about this Privacy Policy, please contact us at support@babysleeppdf.com. 
+              We aim to respond within 24 hours.
             </p>
           </div>
         </div>

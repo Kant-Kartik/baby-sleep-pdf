@@ -63,13 +63,13 @@ const Shipping = () => {
               <li>Check your spam/junk email folder if you don't see the email within 1-2 hours</li>
               <li>Ensure you provide a valid email address during purchase</li>
               <li>Save the PDF to your device immediately upon receipt</li>
-              <li>We do not provide customer support or re-send lost files</li>
+              <li>Contact support@babysleeppdf.com if you have delivery issues</li>
             </ul>
 
-            <h2 className="text-xl font-semibold mb-3 text-foreground">No Customer Support</h2>
+            <h2 className="text-xl font-semibold mb-3 text-foreground">Customer Support</h2>
             <p className="mb-4">
-              <strong>Please note:</strong> We do not provide customer support, re-delivery services, or assistance with technical issues. 
-              All sales are final and PDF delivery is automated via email within 1-2 hours of purchase.
+              <strong>Need help?</strong> Contact us at support@babysleeppdf.com for delivery issues or questions. 
+              We aim to respond within 24 hours. Please note that all sales remain final.
             </p>
           </div>
         </div>
