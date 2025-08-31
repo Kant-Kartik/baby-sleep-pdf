@@ -66,10 +66,37 @@ const Checkout = () => {
       theme: {
         color: '#7c3aed',
       },
-      handler: function (response: any) {
-        // Payment successful
+      handler: async function (response: any) {
+        // Payment successful - verify and send email
         console.log('Payment successful:', response);
-        navigate(`/success?payment_id=${response.razorpay_payment_id}&email=${encodeURIComponent(email)}`);
+        
+        try {
+          // Verify payment and send email
+          const verifyResponse = await fetch('/api/verify-payment', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_signature: response.razorpay_signature,
+              customer_email: email,
+            }),
+          });
+
+          const verifyResult = await verifyResponse.json();
+          
+          if (verifyResult.success) {
+            navigate(`/success?payment_id=${response.razorpay_payment_id}&email=${encodeURIComponent(email)}`);
+          } else {
+            throw new Error('Payment verification failed');
+          }
+        } catch (error) {
+          console.error('Payment verification failed:', error);
+          alert('Payment successful but email delivery failed. Please contact support.');
+          navigate(`/success?payment_id=${response.razorpay_payment_id}&email=${encodeURIComponent(email)}`);
+        }
       },
       modal: {
         ondismiss: function () {
