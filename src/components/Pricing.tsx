@@ -49,10 +49,9 @@ export const Pricing = () => {
               <div className="text-center">
                 <div className="flex items-baseline justify-center space-x-2">
                   <span className="text-5xl font-bold text-primary">$9</span>
-                  <span className="text-2xl text-muted-foreground">/ ₹747</span>
                 </div>
                 <div className="flex items-center justify-center space-x-4 mt-2">
-                  <div className="text-sm text-muted-foreground line-through">$30 / ₹2,490</div>
+                  <div className="text-sm text-muted-foreground line-through">$30</div>
                   <div className="text-sm font-medium text-primary">70% OFF</div>
                 </div>
               </div>
