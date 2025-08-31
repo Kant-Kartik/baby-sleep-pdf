@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Mail, Home, Clock } from "lucide-react";
+import { trackPurchase } from "@/components/MetaPixel";
 
 const Success = () => {
   const [searchParams] = useSearchParams();
@@ -18,6 +19,9 @@ const Success = () => {
           // In a real app, you'd verify the payment with your backend
           console.log('Verifying Razorpay payment:', paymentId);
           setVerified(true);
+          
+          // Track purchase for Meta Pixel
+          trackPurchase(9, paymentId);
           
           // Log email processing (in real app, trigger email send)
           if (email) {

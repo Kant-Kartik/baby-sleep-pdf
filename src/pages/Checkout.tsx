@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowLeft, CreditCard, Lock } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
+import { trackInitiateCheckout } from "@/components/MetaPixel";
 
 declare global {
   interface Window {
@@ -18,6 +19,8 @@ const Checkout = () => {
   // Detect user's country on component mount (for Razorpay payment options)
   useEffect(() => {
     detectUserLocation();
+    // Track checkout initiation for Meta Pixel
+    trackInitiateCheckout(9);
   }, []);
 
   const detectUserLocation = async () => {
