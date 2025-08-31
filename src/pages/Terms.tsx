@@ -37,8 +37,8 @@ const Terms = () => {
             <ul className="list-disc pl-6 mb-4">
               <li>All prices are listed in USD</li>
               <li>Payment is processed securely through Razorpay</li>
-              <li>You will receive the PDF immediately after successful payment</li>
-              <li>All sales are final unless otherwise specified in our refund policy</li>
+              <li>You will receive the PDF directly in your email within 24 hours after successful payment</li>
+              <li><strong>All sales are final - NO REFUNDS will be provided</strong></li>
             </ul>
 
             <h2 className="text-xl font-semibold mb-3 text-foreground">License and Usage</h2>
@@ -59,9 +59,9 @@ const Terms = () => {
               arising from your use of the product.
             </p>
 
-            <h2 className="text-xl font-semibold mb-3 text-foreground">Contact Information</h2>
+            <h2 className="text-xl font-semibold mb-3 text-foreground">No Customer Support</h2>
             <p className="mb-4">
-              For questions about these terms, contact us at support@babysleeppdf.com
+              Please note that we do not provide customer support. All sales are final and no assistance is provided beyond the delivery of the PDF guide to your email.
             </p>
           </div>
         </div>

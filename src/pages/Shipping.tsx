@@ -18,7 +18,7 @@ const Shipping = () => {
         </Button>
 
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h1 className="text-3xl font-bold mb-6 text-foreground">Shipping Policy</h1>
+          <h1 className="text-3xl font-bold mb-6 text-foreground">Delivery Information</h1>
           <div className="prose max-w-none text-muted-foreground">
             <p className="mb-4"><strong>Last updated:</strong> {new Date().toLocaleDateString()}</p>
 
@@ -28,27 +28,26 @@ const Shipping = () => {
               No physical items will be shipped to your address.
             </p>
 
-            <h2 className="text-xl font-semibold mb-3 text-foreground">Instant Download</h2>
+            <h2 className="text-xl font-semibold mb-3 text-foreground">Email Delivery</h2>
             <p className="mb-4">
               Upon successful payment completion, you will receive:
             </p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Immediate access to download your PDF guide</li>
-              <li>Email confirmation with download link</li>
-              <li>Backup email with access instructions</li>
+              <li>The PDF guide attached directly to your email</li>
+              <li>Payment confirmation</li>
+              <li>No download links - the PDF is attached to the email</li>
             </ul>
 
             <h2 className="text-xl font-semibold mb-3 text-foreground">Delivery Timeframe</h2>
             <p className="mb-4">
-              <strong>Instant:</strong> Your PDF will be available for download immediately after payment is processed, 
-              typically within 1-2 minutes.
+              <strong>Within 24 hours:</strong> Your PDF will be sent directly to your email address within 24 hours of successful payment.
             </p>
 
-            <h2 className="text-xl font-semibold mb-3 text-foreground">Download Instructions</h2>
+            <h2 className="text-xl font-semibold mb-3 text-foreground">How to Access Your PDF</h2>
             <ol className="list-decimal pl-6 mb-4">
               <li>Complete your purchase using our secure payment system</li>
-              <li>Check your email (including spam folder) for the download link</li>
-              <li>Click the download link to access your PDF</li>
+              <li>Check your email (including spam folder) within 24 hours</li>
+              <li>Download the PDF attachment directly from the email</li>
               <li>Save the PDF to your device for future reference</li>
             </ol>
 
@@ -59,25 +58,18 @@ const Shipping = () => {
               <li>Valid email address for delivery</li>
             </ul>
 
-            <h2 className="text-xl font-semibold mb-3 text-foreground">Delivery Issues</h2>
-            <p className="mb-4">
-              If you don't receive your download link within 10 minutes, please:
-            </p>
+            <h2 className="text-xl font-semibold mb-3 text-foreground">Important Notes</h2>
             <ul className="list-disc pl-6 mb-4">
-              <li>Check your spam/junk email folder</li>
-              <li>Verify the email address used during purchase</li>
-              <li>Contact us at support@babysleeppdf.com for immediate assistance</li>
+              <li>Check your spam/junk email folder if you don't see the email within 24 hours</li>
+              <li>Ensure you provide a valid email address during purchase</li>
+              <li>Save the PDF to your device immediately upon receipt</li>
+              <li>We do not provide customer support or re-send lost files</li>
             </ul>
 
-            <h2 className="text-xl font-semibold mb-3 text-foreground">Re-download Policy</h2>
+            <h2 className="text-xl font-semibold mb-3 text-foreground">No Customer Support</h2>
             <p className="mb-4">
-              If you lose your PDF file, contact us at support@babysleeppdf.com with your purchase details, 
-              and we'll provide you with a new download link.
-            </p>
-
-            <h2 className="text-xl font-semibold mb-3 text-foreground">Contact Support</h2>
-            <p className="mb-4">
-              For any delivery-related questions or issues, email us at support@babysleeppdf.com
+              <strong>Please note:</strong> We do not provide customer support, re-delivery services, or assistance with technical issues. 
+              All sales are final and PDF delivery is automated via email within 24 hours of purchase.
             </p>
           </div>
         </div>
