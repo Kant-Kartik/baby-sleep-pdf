@@ -48,11 +48,11 @@ export const Pricing = () => {
             <div className="flex items-center justify-center mb-6">
               <div className="text-center">
                 <div className="flex items-baseline justify-center space-x-2">
-                  <span className="text-5xl font-bold text-primary">$1</span>
+                  <span className="text-5xl font-bold text-primary">$9</span>
                 </div>
                 <div className="flex items-center justify-center space-x-4 mt-2">
                   <div className="text-lg text-muted-foreground line-through">$30</div>
-                  <div className="text-2xl font-bold text-primary bg-primary/10 px-4 py-1 rounded-full">97% OFF</div>
+                  <div className="text-2xl font-bold text-primary bg-primary/10 px-4 py-1 rounded-full">70% OFF</div>
                 </div>
               </div>
             </div>

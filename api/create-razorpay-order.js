@@ -45,7 +45,7 @@ export default async function handler(req, res) {
     if (userCountry === 'IN') {
       // Indian customer - use INR to enable UPI/NetBanking
       finalCurrency = 'INR';
-      const exchangeRate = 83; // 1 USD = 83 INR (so $1 = ₹83)
+      const exchangeRate = 83; // 1 USD = 83 INR (so $9 = ₹747)
       finalAmount = Math.round(amount * exchangeRate * 100); // Convert to paise
     } else {
       // Global customer - use USD

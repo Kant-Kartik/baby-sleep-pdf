@@ -44,7 +44,7 @@ const Checkout = () => {
         },
         body: JSON.stringify({
           email: email,
-          amount: 1, // Temporary $1 USD for testing
+          amount: 9, // Back to $9 USD
           userCountry: userCountry, // Let Razorpay handle payment methods based on location
         }),
       });
@@ -167,18 +167,18 @@ const Checkout = () => {
             <div className="mb-6">
               <div className="flex justify-between items-center mb-2">
                 <span className="text-lg font-semibold">7-Day Baby Sleep Program</span>
-                <span className="text-2xl font-bold text-primary">$1</span>
+                <span className="text-2xl font-bold text-primary">$9</span>
               </div>
               <div className="flex justify-between items-center text-sm text-muted-foreground">
                 <span>Original Price: $30</span>
-                <span className="text-primary font-medium">Save $29 (97% OFF)</span>
+                <span className="text-primary font-medium">Save $21 (70% OFF)</span>
               </div>
             </div>
 
             <div className="border-t border-border pt-4 mb-6">
               <div className="flex justify-between items-center text-lg font-bold">
                 <span>Total</span>
-                <span className="text-primary">$1</span>
+                <span className="text-primary">$9</span>
               </div>
             </div>
 
@@ -244,11 +244,16 @@ const Checkout = () => {
                     <span>Processing...</span>
                   </div>
                 ) : (
-                  `Complete Purchase - $1`
+                  `Complete Purchase - $9`
                 )}
               </Button>
 
-              <div className="text-center text-xs text-muted-foreground">
+              <div className="text-center text-xs text-muted-foreground space-y-2">
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-3">
+                  <p className="text-blue-800 text-sm font-medium">
+                    ℹ️ Payment Notice: Your payment will be processed directly to the author's account for instant PDF delivery.
+                  </p>
+                </div>
                 <p>🔒 Secure 256-bit SSL encryption</p>
                 <p>By purchasing, you agree to our Terms of Service and Privacy Policy</p>
               </div>
