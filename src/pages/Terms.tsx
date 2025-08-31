@@ -59,9 +59,9 @@ const Terms = () => {
               arising from your use of the product.
             </p>
 
-            <h2 className="text-xl font-semibold mb-3 text-foreground">Customer Support</h2>
+            <h2 className="text-xl font-semibold mb-3 text-foreground">No Customer Support</h2>
             <p className="mb-4">
-              For any questions or issues, contact us at support@babysleeppdf.com. We aim to respond within 24 hours. Please note that all sales remain final.
+              Please note that we do not provide customer support. All sales are final and no assistance is provided beyond the delivery of the PDF guide to your email.
             </p>
           </div>
         </div>

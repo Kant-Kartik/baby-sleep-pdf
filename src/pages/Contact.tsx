@@ -20,23 +20,21 @@ const Contact = () => {
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h1 className="text-3xl font-bold mb-6 text-foreground">Contact Information</h1>
           
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+          <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <Mail className="h-6 w-6 text-blue-600" />
-              <h2 className="text-xl font-semibold text-blue-800">Customer Support</h2>
+              <AlertTriangle className="h-6 w-6 text-red-600" />
+              <h2 className="text-xl font-semibold text-red-800">No Customer Support Provided</h2>
             </div>
-            <p className="text-blue-700 mb-4">
-              <strong>Email:</strong> support@babysleeppdf.com
+            <p className="text-red-700 mb-4">
+              <strong>Important:</strong> We do not provide customer support, technical assistance, 
+              or respond to inquiries. All transactions are automated and final.
             </p>
-            <p className="text-blue-700 mb-4">
-              <strong>Response Time:</strong> Within 24 hours
-            </p>
-            <ul className="text-blue-700 list-disc pl-6 space-y-2">
-              <li>Delivery issues assistance</li>
-              <li>Payment confirmation queries</li>
-              <li>Technical download problems</li>
-              <li>General inquiries</li>
-              <li>Note: All sales remain final</li>
+            <ul className="text-red-700 list-disc pl-6 space-y-2">
+              <li>No email responses</li>
+              <li>No technical support</li>
+              <li>No refund assistance</li>
+              <li>No re-delivery of lost files</li>
+              <li>All sales are final</li>
             </ul>
           </div>
 
@@ -105,14 +103,14 @@ const Contact = () => {
               <li>Check spam/junk folders for the PDF email</li>
               <li>Save the PDF immediately upon receipt</li>
               <li>All sales are final with no exceptions</li>
-                              <li>Support available via email within 24 hours</li>
+                              <li>No customer support or assistance provided</li>
             </ul>
           </div>
 
           <div className="mt-8 text-center">
             <div className="flex items-center justify-center gap-2 text-muted-foreground mb-4">
               <Mail className="h-5 w-5" />
-              <span>support@babysleeppdf.com</span>
+              <span>Automated Email Delivery Only</span>
             </div>
             <Button 
               onClick={() => navigate('/checkout')}
