@@ -21,7 +21,7 @@ const Success = () => {
           setVerified(true);
           
           // Track purchase for Meta Pixel
-          trackPurchase(9, paymentId);
+          trackPurchase(5, paymentId);
           
           // Log email processing (in real app, trigger email send)
           if (email) {

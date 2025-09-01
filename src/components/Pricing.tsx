@@ -3,7 +3,7 @@ import { CheckCircle, Download, Clock, Shield } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const features = [
-  "Complete 7-Day Sleep Program PDF",
+  "Complete 7-Day Sleep Program eBook",
   "Day-by-day action plan with clear steps",
   "Age-specific strategies",
   "Troubleshooting guide for each day",
@@ -27,9 +27,23 @@ export const Pricing = () => {
           <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-foreground">
             Start Sleeping Better Tonight
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground mb-6">
             One-time purchase. Lifetime of peaceful nights.
           </p>
+          <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-600" />
+              <span>✨ Trusted by 2,000+ parents</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-600" />
+              <span>⭐ 4.9/5 rating</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-600" />
+              <span>🔒 Instant download</span>
+            </div>
+          </div>
         </div>
 
         <div className="bg-gradient-peaceful rounded-2xl p-8 shadow-soft relative overflow-hidden">
@@ -48,11 +62,11 @@ export const Pricing = () => {
             <div className="flex items-center justify-center mb-6">
               <div className="text-center">
                 <div className="flex items-baseline justify-center space-x-2">
-                  <span className="text-5xl font-bold text-primary">$9</span>
+                  <span className="text-5xl font-bold text-primary">$5</span>
                 </div>
                 <div className="flex items-center justify-center space-x-4 mt-2">
                   <div className="text-lg text-muted-foreground line-through">$30</div>
-                  <div className="text-2xl font-bold text-primary bg-primary/10 px-4 py-1 rounded-full">70% OFF</div>
+                  <div className="text-2xl font-bold text-primary bg-primary/10 px-4 py-1 rounded-full">83% OFF</div>
                 </div>
               </div>
             </div>

@@ -37,12 +37,12 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Invalid payment signature' });
     }
 
-    // Payment is verified, send email with PDF using SendGrid
+    // Payment is verified, send email with eBook using SendGrid
     await sendEmailWithPDF(customer_email, razorpay_payment_id);
 
     return res.status(200).json({ 
       success: true, 
-      message: 'Payment verified and PDF sent successfully' 
+      message: 'Payment verified and eBook sent successfully' 
     });
 
   } catch (error) {
@@ -55,7 +55,7 @@ async function sendEmailWithPDF(customerEmail, paymentId) {
   // Set SendGrid API key
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-  // Read PDF file and convert to base64
+  // Read eBook file and convert to base64
   const pdfPath = path.join(process.cwd(), 'public', '7-Day-Baby-Sleep-Guide.pdf');
   const pdfContent = fs.readFileSync(pdfPath);
   const pdfBase64 = pdfContent.toString('base64');
@@ -64,9 +64,9 @@ async function sendEmailWithPDF(customerEmail, paymentId) {
     to: customerEmail,
     from: {
       email: 'kartikkeyankant@gmail.com',
-      name: 'Baby Sleep PDF'
+      name: 'Baby Sleep eBook'
     },
-    subject: '🌙 Your 7-Day Baby Sleep Program PDF is Here!',
+    subject: '🌙 Your 7-Day Baby Sleep Program eBook is Here!',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f8f9fa;">
         <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0;">
@@ -79,7 +79,7 @@ async function sendEmailWithPDF(customerEmail, paymentId) {
           
           <p style="color: #666; line-height: 1.6;">
             Congratulations on taking the first step towards better sleep for your baby! 
-            Your comprehensive 7-Day Baby Sleep Program PDF is attached to this email.
+            Your comprehensive 7-Day Baby Sleep Program eBook is attached to this email.
           </p>
           
           <div style="background: #e8f4fd; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #2196F3;">
@@ -97,7 +97,7 @@ async function sendEmailWithPDF(customerEmail, paymentId) {
           <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ffc107;">
             <h3 style="color: #856404; margin-top: 0;">💡 Quick Start Tips:</h3>
             <ol style="color: #555; line-height: 1.8;">
-              <li><strong>Save the PDF</strong> to your device immediately</li>
+              <li><strong>Save the eBook</strong> to your device immediately</li>
               <li><strong>Start with Day 1</strong> - don't skip ahead</li>
               <li><strong>Follow each step</strong> consistently for best results</li>
               <li><strong>Track progress</strong> using the included sheets</li>
@@ -124,7 +124,7 @@ async function sendEmailWithPDF(customerEmail, paymentId) {
           
           <p style="color: #999; font-size: 12px; text-align: center; margin: 0;">
             This email was sent automatically after your successful purchase. 
-            Please save this email and the attached PDF for your records.
+            Please save this email and the attached eBook for your records.
           </p>
         </div>
       </div>
@@ -141,5 +141,5 @@ async function sendEmailWithPDF(customerEmail, paymentId) {
 
   // Send email
   await sgMail.send(msg);
-  console.log(`PDF sent successfully to ${customerEmail} via SendGrid`);
+  console.log(`eBook sent successfully to ${customerEmail} via SendGrid`);
 }

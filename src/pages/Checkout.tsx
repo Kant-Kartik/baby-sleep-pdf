@@ -20,7 +20,7 @@ const Checkout = () => {
   useEffect(() => {
     detectUserLocation();
     // Track checkout initiation for Meta Pixel
-    trackInitiateCheckout(9);
+    trackInitiateCheckout(5);
   }, []);
 
   const detectUserLocation = async () => {
@@ -47,7 +47,7 @@ const Checkout = () => {
         },
         body: JSON.stringify({
           email: email,
-          amount: 9, // Back to $9 USD
+          amount: 5, // Reduced to $5 USD for better conversion
           userCountry: userCountry, // Let Razorpay handle payment methods based on location
         }),
       });
@@ -80,7 +80,7 @@ const Checkout = () => {
       amount: order.amount,
       currency: order.currency,
       name: '7-Day Baby Sleep Program',
-      description: 'Premium baby sleep guide - instant PDF delivery',
+      description: 'Premium baby sleep guide - instant eBook delivery',
       order_id: order.id,
       prefill: {
         email: email,
@@ -138,7 +138,7 @@ const Checkout = () => {
   };
 
   const features = [
-    "Complete 7-Day Sleep Program PDF",
+    "Complete 7-Day Sleep Program eBook",
     "Day-by-day action plan with clear steps",
     "Age-specific strategies",
     "Troubleshooting guide for each day",
@@ -170,7 +170,7 @@ const Checkout = () => {
             <div className="mb-6">
               <div className="flex justify-between items-center mb-2">
                 <span className="text-lg font-semibold">7-Day Baby Sleep Program</span>
-                <span className="text-2xl font-bold text-primary">$9</span>
+                <span className="text-2xl font-bold text-primary">$5</span>
               </div>
               <div className="flex justify-between items-center text-sm text-muted-foreground">
                 <span>Original Price: $30</span>
@@ -181,7 +181,7 @@ const Checkout = () => {
             <div className="border-t border-border pt-4 mb-6">
               <div className="flex justify-between items-center text-lg font-bold">
                 <span>Total</span>
-                <span className="text-primary">$9</span>
+                <span className="text-primary">$5</span>
               </div>
             </div>
 
@@ -218,7 +218,7 @@ const Checkout = () => {
                   placeholder="your@email.com"
                 />
                 <p className="text-xs text-muted-foreground mt-1">
-                  Your PDF will be sent to this email address
+                  Your eBook will be sent to this email address
                 </p>
               </div>
 
@@ -247,14 +247,14 @@ const Checkout = () => {
                     <span>Processing...</span>
                   </div>
                 ) : (
-                  `Complete Purchase - $9`
+                  `Complete Purchase - $5`
                 )}
               </Button>
 
               <div className="text-center text-xs text-muted-foreground space-y-2">
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-3">
                   <p className="text-blue-800 text-sm font-medium">
-                    ℹ️ Payment Notice: Your payment will be processed directly to the author's account for instant PDF delivery.
+                    ℹ️ Payment Notice: Your payment will be processed directly to the author's account for instant eBook delivery.
                   </p>
                 </div>
                 <p>🔒 Secure 256-bit SSL encryption</p>

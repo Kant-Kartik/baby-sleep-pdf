@@ -9,7 +9,7 @@ import { trackViewContent } from "@/components/MetaPixel";
 const Index = () => {
   useEffect(() => {
     // Track page view for Meta Pixel
-    trackViewContent('7-Day Baby Sleep Program', 9);
+    trackViewContent('7-Day Baby Sleep Program', 5);
   }, []);
 
   return (
